@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K"ANKA PAPITAS  FEXPO ITSEC SUCRE</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8ee;
+            color: #30251f;
+        }
+
+        header {
+            background: #921e24;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            background: #38201c;
+        }
+
+        nav button {
+            background: #f6c453;
+            color: #38201c;
+            border: none;
+            border-radius: 7px;
+            padding: 13px 18px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav button:hover,
+        nav button.activo {
+            background: white;
+            color: #921e24;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+
+        .pestana {
+            display: none;
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000015;
+        }
+
+        .pestana.activa {
+            display: block;
+        }
+
+        h2 {
+            color: #921e24;
+            border-bottom: 3px solid #f6c453;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #921e24;
+        }
+
+        .portada {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .portada h2 {
+            font-size: 30px;
+        }
+
+        .datos {
+            background: #fff4d9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            line-height: 1.9;
+            text-align: left;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .producto {
+            background: #fff5df;
+            border: 1px solid #f0d7a1;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .producto h3 {
+            margin-top: 5px;
+        }
+
+        .precio {
+            color: #921e24;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .galeria img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid #f0d7a1;
+        }
+
+        .nota {
+            background: #fff4d9;
+            border-left: 5px solid #f6c453;
+            padding: 15px;
+            border-radius: 5px;
+            line-height: 1.6;
+        }
+
+        video {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #38201c;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav button {
+                width: 100%;
+            }
+
+            .pestana {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>K"ANKA PAPITAS</h1>
+    <p>FEXPO ITSEC SUCRE 2026</p>
+    <p>Un emprendimiento de k"anka papitas </p>
+</header>
+
+<nav>
+    <button class="activo" onclick="mostrarPestana('portada', this)">
+        Carátula
+    </button>
+
+    <button onclick="mostrarPestana('emprendimiento', this)">
+        Emprendimiento
+    </button>
+
+    <button onclick="mostrarPestana('preparacion', this)">
+        Preparación
+    </button>
+
+    <button onclick="mostrarPestana('stand', this)">
+        Nuestro stand
+    </button>
+</nav>
+
+<main>
+    <section id="portada" class="pestana activa">
+        <div class="portada">
+            <img src="logo.jpeg" alt="Logo de K'ANKA PAPITAS" style="max-width: 220px; margin-bottom: 20px;">
+
+        
+            <h2>FEXPO ITSEC SUCRE 2026</h2>
+            <h3>Presentación de nuestro emprendimiento</h3>
+
+            <div class="datos">
+                <p><strong>Institución:</strong> Instituto Técnico
+                Superior de Educación Comercial Sucre "ITSEC Sucre"</p>
+
+                <p><strong>Carrera:</strong>
+                Sistemas Informáticos</p>
+
+                <p><strong>Materia:</strong>1roC Diseño y Programación WEB 1</p>
+
+                <p><strong>Estudiante:</strong> Maroja Ticona Bautista</p>
+
+                <p><strong>Emprendimiento:</strong> K"ANKA PAPITAS</p>
+
+                <p><strong>Actividad:</strong> Feria de emprendimientos
+                FEXPO ITSEC SUCRE</p>
+
+                <p><strong>Gestión:</strong> 2026</p>
+            </div>
+
+            <p class="nota">
+            Bienvenidos Este es el portal oficial de nuestro emprendimiento. Queremos invitarte a conocer
+             a fondo nuestro proyecto a través de este recorrido web. En este sitio te presentamos desde las 
+             primeras ideas de nuestro negocio, pasando por los días de arduo esfuerzo y dedicación en la 
+             preparación para la feria,hasta culminar con el gran día de nuestra participación en la 
+             FEXPO ITSEC SUCRE. Gracias por visitarnos y por ser parte de esta importante experiencia para nosotros.
+            </p>
+        </div>
+    </section>
+    <section id="emprendimiento" class="pestana">
+        <h2>Nuestro emprendimiento</h2>
+
+        <h3>Qué es K"ANKA PAPITAS</h3>
+        <p>
+        Somos un emprendimiento joven y apasionado por los snacks y las bebidas. Creamos K"ANKA PAPITAS 
+        como una propuesta llena de sabor, y nuestra participación en la FEXPO ITSEC SUCRE fue la oportunidad 
+        perfecta para ponernos a prueba. Nuestro objetivo principal fue conectar con los visitantes a través de 
+        productos ideales para compartir aprender el arte de atender al cliente y adquirir una valiosa
+         experiencia práctica en el mundo del comercio real.
+        </p>
+
+        <h3>¿Cómo decidimos realizar este emprendimiento?</h3>
+
+        <p>
+        Decidimos participar con K"ANKA PAPITAS porque queríamos
+        ofrecer productos que las personas pudieran disfrutar
+        durante la feria. Organizamos nuestra propuesta tomando
+        en cuenta los productos, los precios, los materiales
+        necesarios y la presentación del puesto de venta.
+        </p>
+        <h3>Productos y precios</h3>
+
+        <div class="productos">
+            <div class="producto">
+                <h3>Papitas normales</h3>
+                <p>Presentaciones de dos tamaños.</p>
+                <p class="precio">Bs 7 y Bs 12</p>
+            </div>
+
+            <div class="producto">
+                <h3>Papitas con orégano</h3>
+                <p>Papitas saborizadas con orégano.</p>
+                <p class="precio">Bs 7 y Bs 12</p>
+            </div>
+
+            <div class="producto">
+                <h3>Papitas semipicantes</h3>
+                <p>Una opción con sabor semipicante.</p>
+                <p class="precio">Bs 7 y Bs 12</p>
+            </div>
+
+            <div class="producto">
+                <h3>Pipocas</h3>
+                <p>Producto para disfrutar como snack.</p>
+                <p class="precio">Bs 5</p>
+            </div>
+
+            <div class="producto">
+                <h3>Coca-Cola</h3>
+                <p>Soda servida en vaso desechable.</p>
+                <p class="precio">Bs 5</p>
+            </div>
+        </div>
+
+        <h3>Objetivo del emprendimiento</h3>
+
+        <p>
+            Nuestro objetivo fue presentar una propuesta de venta,
+            aprender sobre la organización de un pequeño negocio,
+            atender a los visitantes y poner en práctica la
+            responsabilidad, la comunicación y el trabajo en equipo.
+        </p>
+    </section>
+    <section id="preparacion" class="pestana">
+        <h2>Preparación para la FEXPO ITSEC SUCRE</h2>
+
+        <p>
+            Para participar en la FEXPO ITSEC SUCRE fue necesario
+            organizar los productos, definir los precios y preparar
+            los materiales que utilizaríamos en el puesto de venta.
+            También tomamos en cuenta la presentación de los productos
+            y la organización del espacio.
+        </p>
+
+        <h3>Qué preparamos</h3>
+
+        <ul>
+            <li>Papitas normales, con orégano y semipicantes</li>
+            <li>Pipocas para la venta</li>
+            <li>Coca-Cola para servir en vasos desechables</li>
+            <li>Materiales necesarios para organizar el puesto</li>
+            <li>Distribución de los productos y sus precios</li>
+            <li>Organización para atender a los visitantes</li>
+        </ul>
+
+        <h3>Fotografías de la preparación</h3>
+
+        <p>
+            En este espacio deben colocarse fotografías reales
+            del estudiante preparando los productos, organizando
+            los materiales o alistando las cosas para la feria.
+        </p>
+
+        <div class="galeria">
+            <div>
+                <img src="primer.jpeg"
+                     alt="Primera fotografía de la preparación">
+                <p><strong>Fotografía 1:</strong> Preparación del emprendimiento</p>
+            </div>
+
+            <div>
+                <img src="segundo.jpeg"
+                     alt="Segunda fotografía de la preparación">
+                <p><strong>Fotografía 2:</strong> Organización de los materiales.</p>
+            </div>
+        </div>
+
+        <p class="nota">
+            Importante: reemplaza preparacion1.jpg y preparacion2.jpg
+            por tus fotografías reales. No dejes imágenes que no existan
+            en la carpeta del proyecto.
+        </p>
+    </section>
+    <section id="stand" class="pestana">
+        <h2>Nuestro stand en la FEXPO ITSEC SUCRE</h2>
+
+        <h3>K"ANKA PAPITAS en la feria</h3>
+
+        <p>
+            Nuestro stand fue el espacio donde presentamos y ofrecimos
+            nuestros productos a los visitantes de la FEXPO ITSEC SUCRE.
+            Organizamos las papitas, las pipocas y las bebidas para
+            que las personas pudieran conocer nuestra propuesta.
+        </p>
+
+        <h3>Fotografías del stand</h3>
+
+        <div class="galeria">
+            <div>
+                <img src="segundo.jpeg"
+                     alt="Fotografía del stand KANKA PAPITAS">
+                <p><strong>Fotografía 1:</strong> Stand del emprendimiento.</p>
+            </div>
+
+            <div>
+                <img src="TERCER.jpeg"
+                     alt="Segunda fotografía del stand">
+                <p><strong>Fotografía 2:</strong> Otra vista del stand</p>
+            </div>
+
+            <div>
+                <img src="cuarto.jpeg"
+                     alt="Estudiante junto al stand">
+                <p><strong>Fotografía 3:</strong> Estudiante en el stand.</p>
+            </div>
+        </div>
+
+        <h3>Video de presentación del emprendimiento</h3>
+
+        <p>
+            En el siguiente video se debe presentar K"ANKA PAPITAS,
+            explicar brevemente qué productos ofrecemos y mostrar
+            nuestra participación en la feria. La duración debe ser
+            de un máximo de 20 segundos.
+        </p>
+
+        <video controls>
+            <source src="VIDEO.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+        </video>
+
+        <h3>Conclusión</h3>
+
+        <p>
+            Participar en la FEXPO ITSEC SUCRE con nuestro emprendimiento K"ANKA PAPITAS fue una experiencia
+             muy valiosa. Nos permitió transformar una idea en algo real, aprendiendo paso a paso cómo organizar 
+             un pequeño negocio, desde la preparación de los productos hasta la atención directa a cada visitante. 
+             Pudimos poner en práctica la responsabilidad, el trabajo en equipo y la amabilidad, valores fundamentales 
+            para cualquier emprendimiento. Estamos muy satisfechos con lo logrado y agradecidos por esta oportunidad,
+             que nos motiva a seguir esforzándonos y mejorando.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>K"ANKA PAPITAS | FEXPO ITSEC SUCRE 2026</p>
+    <p>Proyecto académico de Sistemas Informáticos</p>
+</footer>
+
+<script>
+    function mostrarPestana(id, boton) {
+        const pestanas = document.querySelectorAll(".pestana");
+        const botones = document.querySelectorAll("nav button");
+
+        pestanas.forEach(function(pestana) {
+            pestana.classList.remove("activa");
+        });
+
+        botones.forEach(function(b) {
+            b.classList.remove("activo");
+        });
+
+        document.getElementById(id).classList.add("activa");
+        boton.classList.add("activo");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+</body>
+</html>
